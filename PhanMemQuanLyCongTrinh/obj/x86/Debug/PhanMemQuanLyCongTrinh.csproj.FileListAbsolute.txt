@@ -53,3 +53,6 @@ D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\PhanMemQua
 D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\PhanMemQuanLyCongTrinh\obj\x86\Debug\PhanMemQuanLyCongTrinh.frm_UpdateConstructionItem.resources
 D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\PhanMemQuanLyCongTrinh\obj\x86\Debug\PhanMemQuanLyCongTrinh.frm_UpdateContruction.resources
 D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\PhanMemQuanLyCongTrinh\obj\x86\Debug\PhanMemQuanLyCongTrinh.frm_Updateprogress.resources
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\Github\Github\QLXayDung_Skytech\PhanMemQuanLyCongTrinh\bin\Debug\PhanMemQuanLyCongTrinh.exe.config
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\Github\Github\QLXayDung_Skytech\PhanMemQuanLyCongTrinh\obj\x86\Debug\PhanMemQuanLyCongTrinh.exe
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\Github\Github\QLXayDung_Skytech\PhanMemQuanLyCongTrinh\obj\x86\Debug\PhanMemQuanLyCongTrinh.pdb
