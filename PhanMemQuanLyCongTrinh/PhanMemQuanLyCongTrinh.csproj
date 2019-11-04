@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E73878A1-F885-4F3E-A4D1-CA311A7C810B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhanMemQuanLyCongTrinh</RootNamespace>
+    <AssemblyName>PhanMemQuanLyCongTrinh</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Supplies_And_Quantity.cs" />
+    <Compile Include="BUS\AccountingAccountGroupBus.cs" />
+    <Compile Include="BUS\AcountingAcountBus.cs" />
+    <Compile Include="BUS\buildingContractorBus.cs" />
+    <Compile Include="BUS\ChangeColorGridView.cs" />
+    <Compile Include="BUS\constructionBus.cs" />
+    <Compile Include="BUS\constructionItemBus.cs" />
+    <Compile Include="BUS\customerBus.cs" />
+    <Compile Include="BUS\customerGroupBus.cs" />
+    <Compile Include="BUS\detail_employee_constructionBus.cs" />
+    <Compile Include="BUS\progressBus.cs" />
+    <Compile Include="BUS\storehouseBus.cs" />
+    <Compile Include="BUS\storehouseDetailBus.cs" />
+    <Compile Include="GUI\StyleDevxpressGridControl.cs" />
+    <Compile Include="BUS\supliesBus.cs" />
+    <Compile Include="DAO\AccountingAccountGroupDao.cs" />
+    <Compile Include="DAO\AcountingAcountDaocs.cs" />
+    <Compile Include="DAO\buildingContractorDao.cs" />
+    <Compile Include="DAO\constructionDao.cs" />
+    <Compile Include="DAO\constructionItemDao.cs" />
+    <Compile Include="DAO\customerDao.cs" />
+    <Compile Include="DAO\customerGroupDao.cs" />
+    <Compile Include="DAO\detail_employee_constructionDao.cs" />
+    <Compile Include="DAO\progressDao.cs" />
+    <Compile Include="DAO\storehouseDao.cs" />
+    <Compile Include="DAO\storehouseDetailDao.cs" />
+    <Compile Include="DAO\supliesDao.cs" />
+    <Compile Include="DTO\DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_AddNewEmployeeContructItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_AddNewEmployeeContructItems.Designer.cs">
+      <DependentUpon>frm_AddNewEmployeeContructItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Employees_Contruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Employees_Contruct.Designer.cs">
+      <DependentUpon>frm_Employees_Contruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Constructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Constructions.Designer.cs">
+      <DependentUpon>frm_Constructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_newConstructionItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_newConstructionItem.Designer.cs">
+      <DependentUpon>frm_newConstructionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_NewConstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_NewConstructions.Designer.cs">
+      <DependentUpon>frm_NewConstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_NewProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_NewProgress.Designer.cs">
+      <DependentUpon>frm_NewProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_progress.Designer.cs">
+      <DependentUpon>frm_progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_UpdateConstructionItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_UpdateConstructionItem.Designer.cs">
+      <DependentUpon>frm_UpdateConstructionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_UpdateContruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_UpdateContruction.Designer.cs">
+      <DependentUpon>frm_UpdateContruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Updateprogress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Construction\frm_Updateprogress.Designer.cs">
+      <DependentUpon>frm_Updateprogress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Supplies\StorehouseDetail\frm_StorehouseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Supplies\StorehouseDetail\frm_StorehouseDetail.Designer.cs">
+      <DependentUpon>frm_StorehouseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_AddNewEnterCouponSupplies.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_AddNewEnterCouponSupplies.cs.Designer.cs">
+      <DependentUpon>frm_AddNewEnterCouponSupplies.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_EditEnterCouponSupplies.cs.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_EditEnterCouponSupplies.cs.cs.Designer.cs">
+      <DependentUpon>frm_EditEnterCouponSupplies.cs.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_EnterCouponSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Supplies\frm_EnterCouponSupplies.Designer.cs">
+      <DependentUpon>frm_EnterCouponSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\GroupSupplies\frm_AddNewGroupSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\GroupSupplies\frm_AddNewGroupSupplies.Designer.cs">
+      <DependentUpon>frm_AddNewGroupSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\deparmentBus.cs" />
+    <Compile Include="BUS\group_suppliesBus.cs" />
+    <Compile Include="BUS\messeage.cs" />
+    <Compile Include="BUS\unitBus.cs" />
+    <Compile Include="BUS\userBus.cs" />
+    <Compile Include="BUS\vendorBus.cs" />
+    <Compile Include="DAO\customer_groupDao.cs" />
+    <Compile Include="DAO\departmentDao.cs" />
+    <Compile Include="DAO\group_suppliesDao.cs" />
+    <Compile Include="DAO\unitDao.cs" />
+    <Compile Include="DAO\userDao.cs" />
+    <Compile Include="DAO\vendorDao.cs" />
+    <Compile Include="GUI\QuanLyHeThong\GroupSupplies\frm_UpdateGroupSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\GroupSupplies\frm_UpdateGroupSupplies.Designer.cs">
+      <DependentUpon>frm_UpdateGroupSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_AddNewSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_AddNewSupplies.Designer.cs">
+      <DependentUpon>frm_AddNewSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_Supplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_Supplies.Designer.cs">
+      <DependentUpon>frm_Supplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_UpdateSuppliescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\supplies\frm_UpdateSuppliescs.Designer.cs">
+      <DependentUpon>frm_UpdateSuppliescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_Update_Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_Update_Unit.Designer.cs">
+      <DependentUpon>frm_Update_Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_Units.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_Units.Designer.cs">
+      <DependentUpon>frm_Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_AddNewUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Unit\frm_AddNewUnit.Designer.cs">
+      <DependentUpon>frm_AddNewUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Button.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Button.designer.cs">
+      <DependentUpon>frm_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Deparment\frm_EditDeparment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Deparment\frm_EditDeparment.Designer.cs">
+      <DependentUpon>frm_EditDeparment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_Employees.Designer.cs">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\frm_Logout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\frm_Logout.Designer.cs">
+      <DependentUpon>frm_Logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_RePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_RePassword.Designer.cs">
+      <DependentUpon>frm_RePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Deparment\frm_NewDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Deparment\frm_NewDepartment.Designer.cs">
+      <DependentUpon>frm_NewDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_ChangePassword.Designer.cs">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_RegisterUser.Designer.cs">
+      <DependentUpon>frm_RegisterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyHeThong\Employees\frm_UserInfo.Designer.cs">
+      <DependentUpon>frm_UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_AccountingAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_AccountingAccounts.Designer.cs">
+      <DependentUpon>frm_AccountingAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_NewAccountingAccountsGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_NewAccountingAccountsGroup.Designer.cs">
+      <DependentUpon>frm_NewAccountingAccountsGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_UpdateAccountingAccountsGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\AccountingAccounts\frm_UpdateAccountingAccountsGroup.Designer.cs">
+      <DependentUpon>frm_UpdateAccountingAccountsGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\BuildingContractors\frm_BuildingContractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\BuildingContractors\frm_BuildingContractor.Designer.cs">
+      <DependentUpon>frm_BuildingContractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\BuildingContractors\frm_NewBuildingContractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\BuildingContractors\frm_NewBuildingContractor.Designer.cs">
+      <DependentUpon>frm_NewBuildingContractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_Customer.designer.cs">
+      <DependentUpon>frm_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_NewCustomer.designer.cs">
+      <DependentUpon>frm_NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_NewCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Customer\frm_NewCustomerGroup.designer.cs">
+      <DependentUpon>frm_NewCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_NewStorehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_NewStorehouse.Designer.cs">
+      <DependentUpon>frm_NewStorehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_Storehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_Storehouse.Designer.cs">
+      <DependentUpon>frm_Storehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_UpdateStorehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\StoreHouse\frm_UpdateStorehouse.Designer.cs">
+      <DependentUpon>frm_UpdateStorehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_NewVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_NewVendor.Designer.cs">
+      <DependentUpon>frm_NewVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_UpdateVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_UpdateVendor.Designer.cs">
+      <DependentUpon>frm_UpdateVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_Vendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quotations\Vendor\frm_Vendor.Designer.cs">
+      <DependentUpon>frm_Vendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DTO\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="GUI\Construction\frm_AddNewEmployeeContructItems.resx">
+      <DependentUpon>frm_AddNewEmployeeContructItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_Employees_Contruct.resx">
+      <DependentUpon>frm_Employees_Contruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_Constructions.resx">
+      <DependentUpon>frm_Constructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_newConstructionItem.resx">
+      <DependentUpon>frm_newConstructionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_NewConstructions.resx">
+      <DependentUpon>frm_NewConstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_NewProgress.resx">
+      <DependentUpon>frm_NewProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_progress.resx">
+      <DependentUpon>frm_progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_UpdateConstructionItem.resx">
+      <DependentUpon>frm_UpdateConstructionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_UpdateContruction.resx">
+      <DependentUpon>frm_UpdateContruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Construction\frm_Updateprogress.resx">
+      <DependentUpon>frm_Updateprogress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Supplies\StorehouseDetail\frm_StorehouseDetail.resx">
+      <DependentUpon>frm_StorehouseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Supplies\frm_AddNewEnterCouponSupplies.cs.resx">
+      <DependentUpon>frm_AddNewEnterCouponSupplies.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Supplies\frm_EnterCouponSupplies.resx">
+      <DependentUpon>frm_EnterCouponSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\GroupSupplies\frm_AddNewGroupSupplies.resx">
+      <DependentUpon>frm_AddNewGroupSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\GroupSupplies\frm_UpdateGroupSupplies.resx">
+      <DependentUpon>frm_UpdateGroupSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\supplies\frm_AddNewSupplies.resx">
+      <DependentUpon>frm_AddNewSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\supplies\frm_Supplies.resx">
+      <DependentUpon>frm_Supplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\supplies\frm_UpdateSuppliescs.resx">
+      <DependentUpon>frm_UpdateSuppliescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Unit\frm_Update_Unit.resx">
+      <DependentUpon>frm_Update_Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Unit\frm_Units.resx">
+      <DependentUpon>frm_Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Unit\frm_AddNewUnit.resx">
+      <DependentUpon>frm_AddNewUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Button.resx">
+      <DependentUpon>frm_Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Deparment\frm_EditDeparment.resx">
+      <DependentUpon>frm_EditDeparment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Employees\frm_Employees.resx">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\frm_Logout.resx">
+      <DependentUpon>frm_Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Deparment\frm_NewDepartment.resx">
+      <DependentUpon>frm_NewDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Employees\frm_ChangePassword.resx">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Employees\frm_RegisterUser.resx">
+      <DependentUpon>frm_RegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Employees\frm_RePassword.resx">
+      <DependentUpon>frm_RePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyHeThong\Employees\frm_UserInfo.resx">
+      <DependentUpon>frm_UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\AccountingAccounts\frm_AccountingAccounts.resx">
+      <DependentUpon>frm_AccountingAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\AccountingAccounts\frm_NewAccountingAccountsGroup.resx">
+      <DependentUpon>frm_NewAccountingAccountsGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\AccountingAccounts\frm_UpdateAccountingAccountsGroup.resx">
+      <DependentUpon>frm_UpdateAccountingAccountsGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\BuildingContractors\frm_BuildingContractor.resx">
+      <DependentUpon>frm_BuildingContractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\BuildingContractors\frm_NewBuildingContractor.resx">
+      <DependentUpon>frm_NewBuildingContractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Customer\frm_Customer.resx">
+      <DependentUpon>frm_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Customer\frm_NewCustomer.resx">
+      <DependentUpon>frm_NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Customer\frm_NewCustomerGroup.resx">
+      <DependentUpon>frm_NewCustomerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\StoreHouse\frm_NewStorehouse.resx">
+      <DependentUpon>frm_NewStorehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\StoreHouse\frm_Storehouse.resx">
+      <DependentUpon>frm_Storehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\StoreHouse\frm_UpdateStorehouse.resx">
+      <DependentUpon>frm_UpdateStorehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Vendor\frm_NewVendor.resx">
+      <DependentUpon>frm_NewVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Vendor\frm_UpdateVendor.resx">
+      <DependentUpon>frm_UpdateVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quotations\Vendor\frm_Vendor.resx">
+      <DependentUpon>frm_Vendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DTO\DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\UDEMY\Winform\PhanMemQuanLyXayDung\Source\QLCongTrinh4\QLCongTrinh\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

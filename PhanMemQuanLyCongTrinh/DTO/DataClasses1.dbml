@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLCongTrinh_skytech" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3LCHSSQ\SQLEXPRESS;Initial Catalog=QLCongTrinh_skytech;User ID=sa" SettingsObjectName="PhanMemQuanLyCongTrinh.Properties.Settings" SettingsPropertyName="QLCongTrinh_skytechConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.detail_pulic_debt" Member="detail_pulic_debts">
+    <Type Name="detail_pulic_debt">
+      <Column Name="detail_pulic_debt_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="detail_pulic_debt_id_custom" Type="System.String" DbType="VarChar(35)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="pulic_debt_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="vendor_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="detail_pulic_debt_total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_vendors" Member="ST_vendors">
+    <Type Name="ST_vendor">
+      <Column Name="vendor_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vendor_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vendor_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="vendor_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="vendor_phone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="vendor_bank_account_number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="vendor_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vendor_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vendor_created_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pulic_debt" Member="pulic_debts">
+    <Type Name="pulic_debt">
+      <Column Name="pulic_debt_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pulic_debt_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="payment_slip_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="income_coupon_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_advance_tables" Member="ST_advance_tables">
+    <Type Name="ST_advance_table">
+      <Column Name="advance_table_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="advance_table_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="advance_table_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="advance_table_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="advance_table_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="advance_table_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_building_contractors" Member="ST_building_contractors">
+    <Type Name="ST_building_contractor">
+      <Column Name="building_contractor_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="building_contractor_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="building_contractor_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="building_contractor_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="building_contractor_phone" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="building_contractor_email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="building_contractor_bank_account_number" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="building_contractor_tax_code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="building_contractor_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="building_contractor_liabilities" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="building_contractor_date_of_birth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="building_contractor_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="building_contractor_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="building_contractor_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_construction_items" Member="ST_construction_items">
+    <Type Name="ST_construction_item">
+      <Column Name="construction_item_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="construction_item_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_item_name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="construction_contract_number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="building_contractor_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="construction_item_total_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="construction_item_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_item_file_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_item_file" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_item_date_start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_item_date_end" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_item_date_end_guarantee" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_item_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_constructions" Member="ST_constructions">
+    <Type Name="ST_construction">
+      <Column Name="construction_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="construction_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_addresss" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_contract_number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="customer_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="construction_phone" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="construction_file_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="construction_total_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="construction_file" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_date_start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_date_end" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_date_guarantee" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="construction_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_customer_groups" Member="ST_customer_groups">
+    <Type Name="ST_customer_group">
+      <Column Name="customer_group_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_group_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="customer_group_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_customers" Member="ST_customers">
+    <Type Name="ST_customer">
+      <Column Name="customer_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="customer_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="customer_group_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="customer_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="customer_email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="custome_phone" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="custome_bank_account_number" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="custome_tax_code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="customer_description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="customer_liabilities" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="custome_date_of_birth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="custome_gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="customer_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="customer_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_departments" Member="ST_departments">
+    <Type Name="ST_department">
+      <Column Name="department_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="department_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="department_unit" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="department_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="department_percentage_overtime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_detail_employee_constructions" Member="ST_detail_employee_constructions">
+    <Type Name="ST_detail_employee_construction">
+      <Column Name="employee_construction_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_construction_id_custom" Type="System.String" DbType="VarChar(47)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="construction_item_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_detail_enter_coupon_supplies" Member="ST_detail_enter_coupon_supplies">
+    <Type Name="ST_detail_enter_coupon_supply">
+      <Column Name="detail_enter_coupon_supplies_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="detail_enter_coupon_supplies_id_custom" Type="System.String" DbType="VarChar(47)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="enter_coupon_supplies_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="supplies_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="detail_enter_coupon_supplies_quatity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="detail_enter_coupon_supplies_total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_detail_income_and_expenditure_patterns" Member="ST_detail_income_and_expenditure_patterns">
+    <Type Name="ST_detail_income_and_expenditure_pattern">
+      <Column Name="detail_income_and_expenditure_pattern_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="detail_income_and_expenditure_pattern_id_custom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="income_and_expenditure_pattern_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="detail_income_and_expenditure_pattern_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_employees" Member="ST_employees">
+    <Type Name="ST_employee">
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="employee_username" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="employee_password" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="employee_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="employee_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="employee_phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="employee_date_of_birth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_bank_account_number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="employee_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="permission_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="department_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="employee_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_enter_coupon_supplies" Member="ST_enter_coupon_supplies">
+    <Type Name="ST_enter_coupon_supply">
+      <Column Name="enter_coupon_supplies_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="enter_coupon_supplies_id_custom" Type="System.String" DbType="VarChar(45)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vendor_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="storehouse_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="enter_coupon_supplies_number" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="enter_coupon_supplies_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="enter_coupon_supplies_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="enter_coupon_supplies_total_percent_discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="enter_coupon_supplies_total_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="enter_coupon_supplies_document" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_group_supplies" Member="ST_group_supplies">
+    <Type Name="ST_group_supply">
+      <Column Name="group_supplies_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_supplies_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="group_supplies_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_income_and_expenditure_patterns" Member="ST_income_and_expenditure_patterns">
+    <Type Name="ST_income_and_expenditure_pattern">
+      <Column Name="income_and_expenditure_pattern_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="income_and_expenditure_pattern_id_custom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="income_and_expenditure_pattern_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_income_coupons" Member="ST_income_coupons">
+    <Type Name="ST_income_coupon">
+      <Column Name="income_coupon_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="income_coupon_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="detail_income_and_expenditure_pattern_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="income_coupon_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="income_coupon_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="income_coupon_document" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="income_coupon_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="income_coupon_total_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="employee_id_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_payment_slips" Member="ST_payment_slips">
+    <Type Name="ST_payment_slip">
+      <Column Name="payment_slip_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="payment_slip_id_custom" Type="System.String" DbType="VarChar(43)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="vendor_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="construction_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="customer_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="payment_slip_receiver" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payment_slip_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payment_slip_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payment_slip_document" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payment_slip_total_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="detail_income_and_expenditure_pattern_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="payment_slip_created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_payroll_employee_constructions" Member="ST_payroll_employee_constructions">
+    <Type Name="ST_payroll_employee_construction">
+      <Column Name="payroll_employee_construction_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="payroll_employee_construction_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="payroll_employee_construction_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payroll_employee_construction_date_start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="payroll_employee_construction_date_end" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_permissions" Member="ST_permissions">
+    <Type Name="ST_permission">
+      <Column Name="permission_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="permission_id_custom" Type="System.String" DbType="VarChar(32)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="permission_name_" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_progress_construction_items" Member="ST_progress_construction_items">
+    <Type Name="ST_progress_construction_item">
+      <Column Name="progress_construction_item_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="progress_construction_item_custom" Type="System.String" DbType="VarChar(55)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="construction_item_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="progress_construction_item_percent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="progress_construction_item_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="progress_construction_item_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="progress_construction_item_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_storehouses" Member="ST_storehouses">
+    <Type Name="ST_storehouse">
+      <Column Name="storehouse_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="storehouse_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="storehouse_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="storehouse_address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="storehouse_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_storehouses_detail" Member="ST_storehouses_details">
+    <Type Name="ST_storehouses_detail">
+      <Column Name="storehouses_detail_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="storehouse_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="supplies_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="storehouse_detail_quantity" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_supplies" Member="ST_supplies">
+    <Type Name="ST_supply">
+      <Column Name="supplies_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="supplies_id_custom" Type="System.String" DbType="VarChar(33)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="unit_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="group_supplies_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="vendor_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="supplies_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supplies_barcode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supplies_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supplies_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="supplies_entry_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="supplies_wholesale_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="supplies_commercial_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="supplies_shipping_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="supplies_survive_the_norm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_timesheets" Member="ST_timesheets">
+    <Type Name="ST_timesheet">
+      <Column Name="timesheet_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="timesheet_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employee_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="timesheet_do_1_day" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="timesheet_do_half_day" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="timesheet_do_hour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="timesheet_do_hour_overtime" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_created" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_units" Member="ST_units">
+    <Type Name="ST_unit">
+      <Column Name="unit_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="unit_id_custom" Type="System.String" DbType="VarChar(34)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="unit_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
