@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AddNewEnterCouponSupplies));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.s_number = new DevExpress.XtraEditors.SpinEdit();
             this.btn_Exit = new DevExpress.XtraEditors.SimpleButton();
             this.btn_AddNew = new DevExpress.XtraEditors.SimpleButton();
             this.txt_descriptoon = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_deliver = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_total_yes = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txt_total_price = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_percent_discount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txt_total = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -73,11 +73,11 @@
             this.total = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.s_number.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_descriptoon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_deliver.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_total_yes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_total_price.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_percent_discount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_total.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_number.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -93,17 +93,17 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.s_number);
             this.groupControl1.Controls.Add(this.btn_Exit);
             this.groupControl1.Controls.Add(this.btn_AddNew);
             this.groupControl1.Controls.Add(this.txt_descriptoon);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.txt_deliver);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.txt_total_yes);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.txt_total_price);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.txt_percent_discount);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.txt_total);
             this.groupControl1.Controls.Add(this.labelControl4);
@@ -116,6 +116,28 @@
             this.groupControl1.Size = new System.Drawing.Size(410, 563);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // s_number
+            // 
+            this.s_number.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.s_number.Location = new System.Drawing.Point(141, 132);
+            this.s_number.Name = "s_number";
+            this.s_number.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.5F);
+            this.s_number.Properties.Appearance.Options.UseFont = true;
+            this.s_number.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.s_number.Properties.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.s_number.Size = new System.Drawing.Size(240, 22);
+            this.s_number.TabIndex = 295;
+            this.s_number.EditValueChanged += new System.EventHandler(this.s_number_EditValueChanged);
             // 
             // btn_Exit
             // 
@@ -162,6 +184,7 @@
             this.btn_AddNew.TabIndex = 293;
             this.btn_AddNew.Text = "Thêm mới";
             this.btn_AddNew.ToolTipTitle = "Ctrl +S";
+            this.btn_AddNew.Click += new System.EventHandler(this.btn_AddNew_Click);
             // 
             // txt_descriptoon
             // 
@@ -202,15 +225,17 @@
             this.labelControl3.TabIndex = 280;
             this.labelControl3.Text = "Người giao hàng:";
             // 
-            // textEdit5
+            // txt_total_yes
             // 
-            this.textEdit5.Location = new System.Drawing.Point(140, 223);
-            this.textEdit5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.5F);
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(241, 22);
-            this.textEdit5.TabIndex = 289;
+            this.txt_total_yes.Location = new System.Drawing.Point(140, 223);
+            this.txt_total_yes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_total_yes.Name = "txt_total_yes";
+            this.txt_total_yes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.5F);
+            this.txt_total_yes.Properties.Appearance.Options.UseFont = true;
+            this.txt_total_yes.Properties.Mask.EditMask = "n0";
+            this.txt_total_yes.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_total_yes.Size = new System.Drawing.Size(241, 22);
+            this.txt_total_yes.TabIndex = 289;
             // 
             // labelControl8
             // 
@@ -231,6 +256,7 @@
             this.txt_total_price.Name = "txt_total_price";
             this.txt_total_price.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.5F);
             this.txt_total_price.Properties.Appearance.Options.UseFont = true;
+            this.txt_total_price.Properties.ReadOnly = true;
             this.txt_total_price.Size = new System.Drawing.Size(241, 22);
             this.txt_total_price.TabIndex = 291;
             // 
@@ -244,18 +270,6 @@
             this.labelControl7.Size = new System.Drawing.Size(81, 16);
             this.labelControl7.TabIndex = 281;
             this.labelControl7.Text = "Cần trả NCC:";
-            // 
-            // txt_percent_discount
-            // 
-            this.txt_percent_discount.Location = new System.Drawing.Point(140, 133);
-            this.txt_percent_discount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_percent_discount.Name = "txt_percent_discount";
-            this.txt_percent_discount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.5F);
-            this.txt_percent_discount.Properties.Appearance.Options.UseFont = true;
-            this.txt_percent_discount.Size = new System.Drawing.Size(241, 22);
-            this.txt_percent_discount.TabIndex = 286;
-            this.txt_percent_discount.EditValueChanged += new System.EventHandler(this.txt_percent_discount_EditValueChanged);
-            this.txt_percent_discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_percent_discount_KeyPress);
             // 
             // labelControl5
             // 
@@ -280,7 +294,6 @@
             this.txt_total.Properties.Mask.EditMask = "n0";
             this.txt_total.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txt_total.Properties.ReadOnly = true;
-            this.txt_total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_total.Size = new System.Drawing.Size(241, 22);
             this.txt_total.TabIndex = 287;
             // 
@@ -647,11 +660,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.s_number.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_descriptoon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_deliver.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_total_yes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_total_price.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_percent_discount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_total.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_number.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -677,11 +690,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txt_deliver;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txt_total_yes;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txt_total_price;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txt_percent_discount;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txt_total;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -712,6 +724,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn total;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItem_quantity;
         private DevExpress.XtraEditors.SimpleButton btn_AddNewSuppelies;
+        private DevExpress.XtraEditors.SpinEdit s_number;
 
 
 

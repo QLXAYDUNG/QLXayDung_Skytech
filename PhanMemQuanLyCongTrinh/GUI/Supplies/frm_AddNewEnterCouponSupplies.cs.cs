@@ -41,7 +41,7 @@ namespace PhanMemQuanLyCongTrinh
             //The Current selected value in the dropdownlist  
             TextEdit t = sender as TextEdit;
             string editvalue =  t.EditValue.ToString();
-            messeage.success(editvalue);
+            //messeage.success(editvalue);
 
         }
   
@@ -168,6 +168,22 @@ namespace PhanMemQuanLyCongTrinh
                 var total_price_supplies = double.Parse(gridView1.Columns["total"].SummaryItem.SummaryValue.ToString());
                 StyleDevxpressGridControl.styleTextBoxVND(txt_total);
                 txt_total.Text = total_price_supplies.ToString();
+
+                int percent = 0;
+                percent = int.Parse(s_number.Value.ToString( ));
+
+                Decimal summaryValue = Decimal.Parse(gridView1.Columns["total"].SummaryItem.SummaryValue.ToString( ));
+                if ( percent > 0 && percent <= 100 )
+                {
+                    Decimal s = (Decimal) percent / 100;
+                    Decimal total = summaryValue - summaryValue * s;
+                    txt_total_price.Text = total.ToString( );
+                }
+                else
+                {
+                    txt_total_price.Text = summaryValue.ToString( );
+                } 
+
             }
             catch(Exception)
             {
@@ -189,36 +205,7 @@ namespace PhanMemQuanLyCongTrinh
             frm.ShowDialog();
         }
 
-        private void txt_percent_discount_EditValueChanged(object sender, EventArgs e)
-        {
-            var total_price_supplies = double.Parse(gridView1.Columns["total"].SummaryItem.SummaryValue.ToString( ));
-            var get_percent = Int32.Parse(txt_percent_discount.EditValue.ToString( ));
-            var percent = 0;
-
-            if ( get_percent != null || get_percent != 0 )
-            {
-                if ( get_percent >= 1 && get_percent <= 100 )
-                {
-                    percent = get_percent;
-                }
-                else
-                {
-                    percent = 0;
-                }
-            }
-            
-            txt_percent_discount.Text = percent.ToString();
-            
-            if (percent != 0)
-            {
-                txt_total_price.Text = ((percent * total_price_supplies)/100).ToString();
-            }
-            else
-            {
-                txt_total_price.Text = total_price_supplies.ToString( );
-            }
-
-        }
+      
 
         private void txt_percent_discount_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -228,9 +215,69 @@ namespace PhanMemQuanLyCongTrinh
             }
         }
 
-       
+        // add new phieu nhap
+        private void btn_AddNew_Click(object sender, EventArgs e)
+        {
+            Decimal tienTra = 0;
+            Decimal tienCanTraNCC = 0;
+            // so tien khac rong
+            if ( txt_total_price.Text != "")
+            {
+                if (txt_total_yes.Text == "")
+                {
+                    // them vao cong no
+                }
+                else
+                {
+                    tienTra = Decimal.Parse(txt_total_yes.Text.ToString());
+                    tienCanTraNCC =  Decimal.Parse(txt_total_price.Text.ToString());
+                    if ( tienTra > tienCanTraNCC )
+                    {
+                        messeage.error("Số tiền trả nhà Cung cấp phải bằng số tiền cần trả !");
+                    }
+                    else
+                    {
+                        if ( tienTra == tienCanTraNCC )
+                        {
+                            //tao phieu chi + tao phieu nhap
 
 
+                        }
+                        else if (tienTra < tienCanTraNCC)
+                        {
+                            // tao phieu chi  + tao phieu nhap
 
+                            // tao cong no + tao phieu nhap
+                            messeage.error("Số tiền trả nhỏ hơn !");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                messeage.error("Bạn chưa chọn mặt hàng !");
+            }
+        }
+
+
+        private void s_number_EditValueChanged(object sender, EventArgs e)
+        {
+            int percent = 0;
+            percent = int.Parse(s_number.EditValue.ToString());
+            //messeage.success(percent.ToString());
+            Decimal summaryValue = Decimal.Parse(gridView1.Columns["total"].SummaryItem.SummaryValue.ToString( ));
+            if ( percent > 0 && percent <= 100)
+            {
+                Decimal s = (Decimal) percent / 100;
+                Decimal total = summaryValue - summaryValue * s;
+                txt_total_price.Text = total.ToString( );
+            }
+            else
+            {
+                txt_total_price.Text = summaryValue.ToString( );
+            }  
+
+               
+        }
     }
 }
