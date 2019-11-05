@@ -33,5 +33,16 @@ namespace PhanMemQuanLyCongTrinh.Properties {
                 return ((string)(this["QLCongTrinh_skytechConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=desktop-4cj7rn2\\sqlexpress;Initial Catalog=QLCongTrinh1_skytech;Persi" +
+            "st Security Info=True;User ID=sa;Password=1234")]
+        public string QLCongTrinh1_skytechConnectionString {
+            get {
+                return ((string)(this["QLCongTrinh1_skytechConnectionString"]));
+            }
+        }
     }
 }

@@ -243,10 +243,10 @@ namespace PhanMemQuanLyCongTrinh
 
         private void btnListEnterCouponSupplies_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = kiemtraform(typeof(frm_EnterCouponSupplies));
+            Form frm = kiemtraform(typeof(frm_EnterCoupon));
             if ( frm == null )
             {
-                frm_EnterCouponSupplies forms = new frm_EnterCouponSupplies( );
+                frm_EnterCoupon forms = new frm_EnterCoupon();
                 forms.MdiParent = this;
                 forms.Show( );
             }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 18.5" name="DataClasses1">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 20.5" name="DataClasses1">
   <DataContextMoniker Name="/DataClasses1DataContext" />
   <nestedChildShapes>
     <classShape Id="0d676827-4396-4ea4-83e5-5bd63d73738b" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
@@ -162,6 +162,18 @@
       <DataClassMoniker Name="/DataClasses1DataContext/ST_unit" />
       <nestedChildShapes>
         <elementListCompartment Id="044bb3e1-57c6-43dd-8850-82d362d7bf8a" absoluteBounds="15.765, 16.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb4e3941-5da9-4dbe-91bc-abd52e851685" absoluteBounds="0.75, 17.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DataClasses1DataContext/ST_enter_coupon_supply1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a857418-5a0b-4c2c-af3e-770f8e30946e" absoluteBounds="0.765, 18.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94df2f68-ee7b-4573-8db7-939211050eeb" absoluteBounds="6.75, 17.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/DataClasses1DataContext/ST_detail_enter_coupon_supply1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f401192-a81b-434f-80eb-4070d1f30e36" absoluteBounds="6.765, 18.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -22,7 +22,7 @@ namespace PhanMemQuanLyCongTrinh.DTO
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLCongTrinh_skytech")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLCongTrinh1_skytech")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -111,10 +111,16 @@ namespace PhanMemQuanLyCongTrinh.DTO
     partial void InsertST_unit(ST_unit instance);
     partial void UpdateST_unit(ST_unit instance);
     partial void DeleteST_unit(ST_unit instance);
+    partial void InsertST_enter_coupon_supply1(ST_enter_coupon_supply1 instance);
+    partial void UpdateST_enter_coupon_supply1(ST_enter_coupon_supply1 instance);
+    partial void DeleteST_enter_coupon_supply1(ST_enter_coupon_supply1 instance);
+    partial void InsertST_detail_enter_coupon_supply1(ST_detail_enter_coupon_supply1 instance);
+    partial void UpdateST_detail_enter_coupon_supply1(ST_detail_enter_coupon_supply1 instance);
+    partial void DeleteST_detail_enter_coupon_supply1(ST_detail_enter_coupon_supply1 instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::PhanMemQuanLyCongTrinh.Properties.Settings.Default.QLCongTrinh_skytechConnectionString, mappingSource)
+				base(global::PhanMemQuanLyCongTrinh.Properties.Settings.Default.QLCongTrinh1_skytechConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -356,6 +362,22 @@ namespace PhanMemQuanLyCongTrinh.DTO
 			get
 			{
 				return this.GetTable<ST_unit>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ST_enter_coupon_supply1> ST_enter_coupon_supply1s
+		{
+			get
+			{
+				return this.GetTable<ST_enter_coupon_supply1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ST_detail_enter_coupon_supply1> ST_detail_enter_coupon_supply1s
+		{
+			get
+			{
+				return this.GetTable<ST_detail_enter_coupon_supply1>();
 			}
 		}
 	}
@@ -6761,6 +6783,442 @@ namespace PhanMemQuanLyCongTrinh.DTO
 					this._unit_name = value;
 					this.SendPropertyChanged("unit_name");
 					this.Onunit_nameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ST_enter_coupon_supplies")]
+	public partial class ST_enter_coupon_supply1 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _enter_coupon_supplies_id;
+		
+		private string _enter_coupon_supplies_id_custom;
+		
+		private long _storehouse_id;
+		
+		private string _enter_coupon_supplies_number;
+		
+		private System.Nullable<System.DateTime> _enter_coupon_supplies_created_date;
+		
+		private string _enter_coupon_supplies_description;
+		
+		private System.Nullable<int> _enter_coupon_supplies_total_percent_discount;
+		
+		private System.Nullable<decimal> _enter_coupon_supplies_total_price;
+		
+		private long _employee_created;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onenter_coupon_supplies_idChanging(long value);
+    partial void Onenter_coupon_supplies_idChanged();
+    partial void Onenter_coupon_supplies_id_customChanging(string value);
+    partial void Onenter_coupon_supplies_id_customChanged();
+    partial void Onstorehouse_idChanging(long value);
+    partial void Onstorehouse_idChanged();
+    partial void Onenter_coupon_supplies_numberChanging(string value);
+    partial void Onenter_coupon_supplies_numberChanged();
+    partial void Onenter_coupon_supplies_created_dateChanging(System.Nullable<System.DateTime> value);
+    partial void Onenter_coupon_supplies_created_dateChanged();
+    partial void Onenter_coupon_supplies_descriptionChanging(string value);
+    partial void Onenter_coupon_supplies_descriptionChanged();
+    partial void Onenter_coupon_supplies_total_percent_discountChanging(System.Nullable<int> value);
+    partial void Onenter_coupon_supplies_total_percent_discountChanged();
+    partial void Onenter_coupon_supplies_total_priceChanging(System.Nullable<decimal> value);
+    partial void Onenter_coupon_supplies_total_priceChanged();
+    partial void Onemployee_createdChanging(long value);
+    partial void Onemployee_createdChanged();
+    #endregion
+		
+		public ST_enter_coupon_supply1()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long enter_coupon_supplies_id
+		{
+			get
+			{
+				return this._enter_coupon_supplies_id;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_id != value))
+				{
+					this.Onenter_coupon_supplies_idChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_id = value;
+					this.SendPropertyChanged("enter_coupon_supplies_id");
+					this.Onenter_coupon_supplies_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_id_custom", AutoSync=AutoSync.Always, DbType="VarChar(45)", IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public string enter_coupon_supplies_id_custom
+		{
+			get
+			{
+				return this._enter_coupon_supplies_id_custom;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_id_custom != value))
+				{
+					this.Onenter_coupon_supplies_id_customChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_id_custom = value;
+					this.SendPropertyChanged("enter_coupon_supplies_id_custom");
+					this.Onenter_coupon_supplies_id_customChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_storehouse_id", DbType="BigInt NOT NULL")]
+		public long storehouse_id
+		{
+			get
+			{
+				return this._storehouse_id;
+			}
+			set
+			{
+				if ((this._storehouse_id != value))
+				{
+					this.Onstorehouse_idChanging(value);
+					this.SendPropertyChanging();
+					this._storehouse_id = value;
+					this.SendPropertyChanged("storehouse_id");
+					this.Onstorehouse_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_number", DbType="VarChar(200)")]
+		public string enter_coupon_supplies_number
+		{
+			get
+			{
+				return this._enter_coupon_supplies_number;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_number != value))
+				{
+					this.Onenter_coupon_supplies_numberChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_number = value;
+					this.SendPropertyChanged("enter_coupon_supplies_number");
+					this.Onenter_coupon_supplies_numberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_created_date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> enter_coupon_supplies_created_date
+		{
+			get
+			{
+				return this._enter_coupon_supplies_created_date;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_created_date != value))
+				{
+					this.Onenter_coupon_supplies_created_dateChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_created_date = value;
+					this.SendPropertyChanged("enter_coupon_supplies_created_date");
+					this.Onenter_coupon_supplies_created_dateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_description", DbType="NVarChar(255)")]
+		public string enter_coupon_supplies_description
+		{
+			get
+			{
+				return this._enter_coupon_supplies_description;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_description != value))
+				{
+					this.Onenter_coupon_supplies_descriptionChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_description = value;
+					this.SendPropertyChanged("enter_coupon_supplies_description");
+					this.Onenter_coupon_supplies_descriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_total_percent_discount", DbType="Int")]
+		public System.Nullable<int> enter_coupon_supplies_total_percent_discount
+		{
+			get
+			{
+				return this._enter_coupon_supplies_total_percent_discount;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_total_percent_discount != value))
+				{
+					this.Onenter_coupon_supplies_total_percent_discountChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_total_percent_discount = value;
+					this.SendPropertyChanged("enter_coupon_supplies_total_percent_discount");
+					this.Onenter_coupon_supplies_total_percent_discountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_total_price", DbType="Money")]
+		public System.Nullable<decimal> enter_coupon_supplies_total_price
+		{
+			get
+			{
+				return this._enter_coupon_supplies_total_price;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_total_price != value))
+				{
+					this.Onenter_coupon_supplies_total_priceChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_total_price = value;
+					this.SendPropertyChanged("enter_coupon_supplies_total_price");
+					this.Onenter_coupon_supplies_total_priceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_employee_created", DbType="BigInt NOT NULL")]
+		public long employee_created
+		{
+			get
+			{
+				return this._employee_created;
+			}
+			set
+			{
+				if ((this._employee_created != value))
+				{
+					this.Onemployee_createdChanging(value);
+					this.SendPropertyChanging();
+					this._employee_created = value;
+					this.SendPropertyChanged("employee_created");
+					this.Onemployee_createdChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ST_detail_enter_coupon_supplies")]
+	public partial class ST_detail_enter_coupon_supply1 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _detail_enter_coupon_supplies_id;
+		
+		private string _detail_enter_coupon_supplies_id_custom;
+		
+		private long _enter_coupon_supplies_id;
+		
+		private long _supplies_id;
+		
+		private System.Nullable<int> _detail_enter_coupon_supplies_quatity;
+		
+		private string _detail_enter_coupon_supplies_description;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ondetail_enter_coupon_supplies_idChanging(long value);
+    partial void Ondetail_enter_coupon_supplies_idChanged();
+    partial void Ondetail_enter_coupon_supplies_id_customChanging(string value);
+    partial void Ondetail_enter_coupon_supplies_id_customChanged();
+    partial void Onenter_coupon_supplies_idChanging(long value);
+    partial void Onenter_coupon_supplies_idChanged();
+    partial void Onsupplies_idChanging(long value);
+    partial void Onsupplies_idChanged();
+    partial void Ondetail_enter_coupon_supplies_quatityChanging(System.Nullable<int> value);
+    partial void Ondetail_enter_coupon_supplies_quatityChanged();
+    partial void Ondetail_enter_coupon_supplies_descriptionChanging(string value);
+    partial void Ondetail_enter_coupon_supplies_descriptionChanged();
+    #endregion
+		
+		public ST_detail_enter_coupon_supply1()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detail_enter_coupon_supplies_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long detail_enter_coupon_supplies_id
+		{
+			get
+			{
+				return this._detail_enter_coupon_supplies_id;
+			}
+			set
+			{
+				if ((this._detail_enter_coupon_supplies_id != value))
+				{
+					this.Ondetail_enter_coupon_supplies_idChanging(value);
+					this.SendPropertyChanging();
+					this._detail_enter_coupon_supplies_id = value;
+					this.SendPropertyChanged("detail_enter_coupon_supplies_id");
+					this.Ondetail_enter_coupon_supplies_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detail_enter_coupon_supplies_id_custom", AutoSync=AutoSync.Always, DbType="VarChar(47)", IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public string detail_enter_coupon_supplies_id_custom
+		{
+			get
+			{
+				return this._detail_enter_coupon_supplies_id_custom;
+			}
+			set
+			{
+				if ((this._detail_enter_coupon_supplies_id_custom != value))
+				{
+					this.Ondetail_enter_coupon_supplies_id_customChanging(value);
+					this.SendPropertyChanging();
+					this._detail_enter_coupon_supplies_id_custom = value;
+					this.SendPropertyChanged("detail_enter_coupon_supplies_id_custom");
+					this.Ondetail_enter_coupon_supplies_id_customChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_enter_coupon_supplies_id", DbType="BigInt NOT NULL")]
+		public long enter_coupon_supplies_id
+		{
+			get
+			{
+				return this._enter_coupon_supplies_id;
+			}
+			set
+			{
+				if ((this._enter_coupon_supplies_id != value))
+				{
+					this.Onenter_coupon_supplies_idChanging(value);
+					this.SendPropertyChanging();
+					this._enter_coupon_supplies_id = value;
+					this.SendPropertyChanged("enter_coupon_supplies_id");
+					this.Onenter_coupon_supplies_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_supplies_id", DbType="BigInt NOT NULL")]
+		public long supplies_id
+		{
+			get
+			{
+				return this._supplies_id;
+			}
+			set
+			{
+				if ((this._supplies_id != value))
+				{
+					this.Onsupplies_idChanging(value);
+					this.SendPropertyChanging();
+					this._supplies_id = value;
+					this.SendPropertyChanged("supplies_id");
+					this.Onsupplies_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detail_enter_coupon_supplies_quatity", DbType="Int")]
+		public System.Nullable<int> detail_enter_coupon_supplies_quatity
+		{
+			get
+			{
+				return this._detail_enter_coupon_supplies_quatity;
+			}
+			set
+			{
+				if ((this._detail_enter_coupon_supplies_quatity != value))
+				{
+					this.Ondetail_enter_coupon_supplies_quatityChanging(value);
+					this.SendPropertyChanging();
+					this._detail_enter_coupon_supplies_quatity = value;
+					this.SendPropertyChanged("detail_enter_coupon_supplies_quatity");
+					this.Ondetail_enter_coupon_supplies_quatityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detail_enter_coupon_supplies_description", DbType="NVarChar(255)")]
+		public string detail_enter_coupon_supplies_description
+		{
+			get
+			{
+				return this._detail_enter_coupon_supplies_description;
+			}
+			set
+			{
+				if ((this._detail_enter_coupon_supplies_description != value))
+				{
+					this.Ondetail_enter_coupon_supplies_descriptionChanging(value);
+					this.SendPropertyChanging();
+					this._detail_enter_coupon_supplies_description = value;
+					this.SendPropertyChanged("detail_enter_coupon_supplies_description");
+					this.Ondetail_enter_coupon_supplies_descriptionChanged();
 				}
 			}
 		}

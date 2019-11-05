@@ -65,9 +65,17 @@
     <Compile Include="BUS\customerBus.cs" />
     <Compile Include="BUS\customerGroupBus.cs" />
     <Compile Include="BUS\detail_employee_constructionBus.cs" />
+    <Compile Include="BUS\enterCouponBus.cs" />
     <Compile Include="BUS\progressBus.cs" />
     <Compile Include="BUS\storehouseBus.cs" />
     <Compile Include="BUS\storehouseDetailBus.cs" />
+    <Compile Include="DAO\enterCouponDao.cs" />
+    <Compile Include="GUI\Supplies\EnterCoupon\frm_EnterCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Supplies\EnterCoupon\frm_EnterCoupon.Designer.cs">
+      <DependentUpon>frm_EnterCoupon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\StyleDevxpressGridControl.cs" />
     <Compile Include="BUS\supliesBus.cs" />
     <Compile Include="DAO\AccountingAccountGroupDao.cs" />
@@ -416,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Construction\frm_Updateprogress.resx">
       <DependentUpon>frm_Updateprogress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Supplies\EnterCoupon\frm_EnterCoupon.resx">
+      <DependentUpon>frm_EnterCoupon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Supplies\StorehouseDetail\frm_StorehouseDetail.resx">
       <DependentUpon>frm_StorehouseDetail.cs</DependentUpon>
